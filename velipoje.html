@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome | Velipoja</title>
+	<!--meta tags are used to specify character set, page description, keywords, author of the document, and viewport settings.-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--important-->
+	  <link rel="stylesheet"  href="kalaja.css">
+	  <meta name="description" content="Nje website qe sherben si guide">
+	<meta name="keywords" content="qyetet, shiperi, veri, bicikleta, guide, shkodra">
+	<meta name="author" content="Brisalda Dushaj">
+	  <!--Font Awesome Icons CDN-->
+	  <link rel="stylesheet" type="text/css" href="velipoje.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+<script>
+
+	 function initComparisons() {
+  var x, i;
+  /* Find all elements with an "overlay" class: */
+  x = document.getElementsByClassName("img-comp-overlay");
+  for (i = 0; i < x.length; i++) {
+    /* Once for each "overlay" element:
+    pass the "overlay" element as a parameter when executing the compareImages function: */
+    compareImages(x[i]);
+  }
+  function compareImages(img) {
+    var slider, img, clicked = 0, w, h;
+    /* Get the width and height of the img element */
+    w = img.offsetWidth;
+    h = img.offsetHeight;
+    /* Set the width of the img element to 50%: */
+    img.style.width = (w / 2) + "px";
+    /* Create slider: */
+    slider = document.createElement("DIV");
+    slider.setAttribute("class", "img-comp-slider");
+    /* Insert slider */
+    img.parentElement.insertBefore(slider, img);
+    /* Position the slider in the middle: */
+    slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+    slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+    /* Execute a function when the mouse button is pressed: */
+    slider.addEventListener("mousedown", slideReady);
+    /* And another function when the mouse button is released: */
+    window.addEventListener("mouseup", slideFinish);
+    /* Or touched (for touch screens: */
+    slider.addEventListener("touchstart", slideReady);
+     /* And released (for touch screens: */
+    window.addEventListener("touchstop", slideFinish);
+    function slideReady(e) {
+      /* Prevent any other actions that may occur when moving over the image: */
+      e.preventDefault();
+      /* The slider is now clicked and ready to move: */
+      clicked = 1;
+      /* Execute a function when the slider is moved: */
+      window.addEventListener("mousemove", slideMove);
+      window.addEventListener("touchmove", slideMove);
+    }
+    function slideFinish() {
+      /* The slider is no longer clicked: */
+      clicked = 0;
+    }
+    function slideMove(e) {
+      var pos;
+      /* If the slider is no longer clicked, exit this function: */
+      if (clicked == 0) return false;
+      /* Get the cursor's x position: */
+      pos = getCursorPos(e)
+      /* Prevent the slider from being positioned outside the image: */
+      if (pos < 0) pos = 0;
+      if (pos > w) pos = w;
+      /* Execute a function that will resize the overlay image according to the cursor: */
+      slide(pos);
+    }
+    function getCursorPos(e) {
+      var a, x = 0;
+      e = e || window.event;
+      /* Get the x positions of the image: */
+      a = img.getBoundingClientRect();
+      /* Calculate the cursor's x coordinate, relative to the image: */
+      x = e.pageX - a.left;
+      /* Consider any page scrolling: */
+      x = x - window.pageXOffset;
+      return x;
+    }
+    function slide(x) {
+      /* Resize the image: */
+      img.style.width = x + "px";
+      /* Position the slider: */
+      slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+    }
+  }
+}
+</script>
+</head>
+<body>
+
+<!--NAVBAR-->
+<header>
+        <div class="container">
+            <nav class="nav">
+            	
+            		
+                <a href="shkodra.html" class="logo">SHKODRA.</a>
+                <ul class="nav-list">
+                    <li>
+                        <a href="shkodra.html" class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="shkodra.html#about" class="nav-link">About</a>
+                    </li>
+                    <li>
+                        <a href="shkodra.html#destinations" class="nav-link">Destinations</a>
+        
+                    </li>
+                    <li>
+                        <a href="shkodra.html#activities" class="nav-link">Activities</a>
+                    </li>
+                    <li>
+                        <a href="shkodra.html#gallery" class="nav-link">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="register.html" class="nav-link">Register</a>
+                    </li>
+                </ul>
+             <div class="burger">
+             	<div class="line1"></div>
+             	<div class="line2"></div>
+             	<div class="line3"></div>
+             </div>
+            </nav>
+        </div>
+    </header>
+<!--END NAVBAR-->
+
+
+<!--Vertical nav for destinations------------------------------------------->
+   <div id="mySidenav" class="sidenav">
+  <a href="kalajaa.html" id="sidekalaja">Kalaja e Rozafës<i class="fab fa-fort-awesome"></i></a>
+  <a href="shiroke.html" id="sideshiroke">Shirokë<i class="fas fa-water"></i></a>
+  <a href="theth.html" id="sidetheth">Theth<i class="fas fa-mountain"></i></a>
+  <a href="lumi.html" id="sidelumi">Lumi i Shalës<i class="fas fa-ship"></i></a>
+   <a href="razem.html" id="siderazem">Razëm<i class="fas fa-tree"></i></a>
+    <a href="velipoje.html" id="sidevelipoje">Velipojë<i class="fas fa-swimmer"></i></a>
+</div>
+
+<!--Parallax img-->
+<div id="parallax-img"> </div>
+
+  <h1 class="title">Velipoje</h1>
+
+  <!--Timeline----------------------------------------------------------------->
+<div class="timeline">
+	<ul>
+		<li>
+			<div class="content">
+				<h3>Velipoja</h3>
+				<p> Velipoja është një fshat në komunën Velipojë në rrethin e Shkodrës të Shqipërisë.Derdhja e Bunës në veri të vendit shënjon drejt jugut vijën bregdetare shqiptare. Ranishtja më veriore e vendit është ajo e Velipojës, që gjendet rreth 25 km larg qytetit të Shkodër. Këtu ka mbi 250 ditë me diell. Gjatë verës temperaturat arrijnë mbi 20 °C. Pranë ranishtes të Velipojës ndodhet edhe laguna e Vilunit me një sipërfaqe prej rreth 130 hektarë. Ky është një ekosistem i rëndësishëm për folëzimin e shpendëve ujorë, me 183 lloje ; ndodhet edhe një rezervat gjuetie prej 700 hektarë.</p>
+			</div>
+		</li>
+		<li>
+			<div class="content">
+				<h3>...</h3>
+				<p>Velipoja është një qendër turistike mjaft e këndshme, me peizazh të larmishëm, ku ndërthuren hijeshim det, ranishtja, lumi, delta me ishuj, kodra, pylli, laguna, fusha, ligatinat ; vendi më i përshtatshëm për të vrojtuar zogjtë e Adriatikut Lindor në dunat e rërës dhe pellgjet e cekta të ujit ; trevë me popullim të hershëm, tradita të pasura etno-folklorike, me fermerë dhe peshkatarë të zotë, mikpritës të njohur.Velipoja u ofron pushuesve mundësinë për të kaluar pushime në një vijë bregdetare me ujë të pastër dhe me rërë të imët, por jo vetëm kaq, ajo është e pasur me vlera unike natyrore, në të cilat dallohen : Ranishtja e madhe me gjatësi 14 km dhe gjerësi 50–200 m me rërë të imët dhe të pastër, e cila quhet nga banorët “râna e dermanit” për vetitë e saja kuruese. Plazhi ripërtërihet çdo vit nga baticat dhe zbaticat. Rëra e bregut të të gjithë ranishtes ka përqindjen më të lartë të jodit në të gjithë bregdetin shqiptar. Plazhi rrethohet nga pylli me drurë të lartë pishe e drurë të tjerë halorë e fletor, me shkurre përherë të blerta, lugina plot me bimësi ujore, duna, etj.</p>
+			</div>
+		</li>
+		<li>
+			<div class="content">
+				<h3>Relievi & Klima</h3>
+				<p>Fshati bregdetar, ranishtja e madhe dhe qendra turistike shtrihen në jugperëndim të Shkodrës, relievi është gati tërësisht fushor, nga 1-3 metra mbi nivelin e detit deri ne 550 metra.Velipoja ka një klimë të butë (temperatura mesatare 6-7 °C), vera është mjaft e nxehtë (temperatura mesatare e korrikut, 24 °C deri ne 48 °C píku në periudhën korrik–gusht). Periudha e përshtatshme për banjo dielli fillon ne muajin qershor dhe vazhdon deri në fund të shtatorit. Bien rreth 1400 mm reshje në vit, kryesisht të përqendruara në gjysmën e dytë të vjeshtës, dhe dimrit.Emri Velipojë vjen nga sllavishtja e vjetër (Velikopoje – Fushë e Madhe). Zona turistike shtrihet në një sipërfaqe 300 ha dhe kufizohet në veri me rezervatin e Menaxhuar të Velipojës, në jug me detin Adriatik, në lindje me rrethin e Lezhës dhe në perëndim me lumin Buna.</p>
+			</div>
+		</li>
+    <li>
+      <div class="content">
+        <h3>Foto</h3>
+          <div class="img-comp-container"><!--Image Comparison Slider-->
+  <div class="img-comp-img">
+    <img src="photo/velipoja.jpg" width="500" height="300">
+  </div>
+  <div class="img-comp-img img-comp-overlay">
+    <img src="photo/velipoja2.jpg" width="500" height="300">
+  </div>
+</div>
+      </div>
+    </li>
+		<div style="clear: both;"></div>
+	</ul>
+</div>
+
+
+<!--Footer-->
+<div class="footer">
+	<h6>Copyright &copy; 2020, Designed by Brisalda Dushaj</h6>
+</div>
+<!--End footer-->
+
+
+<script type="text/javascript">
+    	//Nav 
+        window.addEventListener('scroll', function () {
+            let header = document.querySelector('header');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition);
+        })
+   
+    const navSlide = () => {
+    	const burger = document.querySelector('.burger');
+    	const nav = document.querySelector('.nav-list');
+        const navList = document.querySelectorAll('.nav-list li');
+       
+    	burger.addEventListener('click',()=>{
+    		//Toggle nav
+            nav.classList.toggle('nav-active');
+    	
+    	//Burger Animation
+    	burger.classList.toggle('toggle');
+        });
+}
+
+    navSlide();
+    //End Nav
+/*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+  initComparisons();
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome | Razem</title>
+	<!--meta tags are used to specify character set, page description, keywords, author of the document, and viewport settings.-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--important-->
+	  <link rel="stylesheet"  href="kalaja.css">
+	  <meta name="description" content="Nje website qe sherben si guide">
+	<meta name="keywords" content="qyetet, shiperi, veri, bicikleta, guide, shkodra">
+	<meta name="author" content="Brisalda Dushaj">
+	  <!--Font Awesome Icons CDN-->
+	  <link rel="stylesheet" type="text/css" href="razem.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+<script>
+
+	 function initComparisons() {
+  var x, i;
+  /* Find all elements with an "overlay" class: */
+  x = document.getElementsByClassName("img-comp-overlay");
+  for (i = 0; i < x.length; i++) {
+    /* Once for each "overlay" element:
+    pass the "overlay" element as a parameter when executing the compareImages function: */
+    compareImages(x[i]);
+  }
+  function compareImages(img) {
+    var slider, img, clicked = 0, w, h;
+    /* Get the width and height of the img element */
+    w = img.offsetWidth;
+    h = img.offsetHeight;
+    /* Set the width of the img element to 50%: */
+    img.style.width = (w / 2) + "px";
+    /* Create slider: */
+    slider = document.createElement("DIV");
+    slider.setAttribute("class", "img-comp-slider");
+    /* Insert slider */
+    img.parentElement.insertBefore(slider, img);
+    /* Position the slider in the middle: */
+    slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+    slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+    /* Execute a function when the mouse button is pressed: */
+    slider.addEventListener("mousedown", slideReady);
+    /* And another function when the mouse button is released: */
+    window.addEventListener("mouseup", slideFinish);
+    /* Or touched (for touch screens: */
+    slider.addEventListener("touchstart", slideReady);
+     /* And released (for touch screens: */
+    window.addEventListener("touchstop", slideFinish);
+    function slideReady(e) {
+      /* Prevent any other actions that may occur when moving over the image: */
+      e.preventDefault();
+      /* The slider is now clicked and ready to move: */
+      clicked = 1;
+      /* Execute a function when the slider is moved: */
+      window.addEventListener("mousemove", slideMove);
+      window.addEventListener("touchmove", slideMove);
+    }
+    function slideFinish() {
+      /* The slider is no longer clicked: */
+      clicked = 0;
+    }
+    function slideMove(e) {
+      var pos;
+      /* If the slider is no longer clicked, exit this function: */
+      if (clicked == 0) return false;
+      /* Get the cursor's x position: */
+      pos = getCursorPos(e)
+      /* Prevent the slider from being positioned outside the image: */
+      if (pos < 0) pos = 0;
+      if (pos > w) pos = w;
+      /* Execute a function that will resize the overlay image according to the cursor: */
+      slide(pos);
+    }
+    function getCursorPos(e) {
+      var a, x = 0;
+      e = e || window.event;
+      /* Get the x positions of the image: */
+      a = img.getBoundingClientRect();
+      /* Calculate the cursor's x coordinate, relative to the image: */
+      x = e.pageX - a.left;
+      /* Consider any page scrolling: */
+      x = x - window.pageXOffset;
+      return x;
+    }
+    function slide(x) {
+      /* Resize the image: */
+      img.style.width = x + "px";
+      /* Position the slider: */
+      slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+    }
+  }
+}
+</script>
+
+</head>
+<body>
+
+<!--NAVBAR--><header>
+        <div class="container">
+            <nav class="nav">
+            	
+            		
+                <a href="shkodra.html" class="logo">SHKODRA.</a>
+                <ul class="nav-list">
+                    <li>
+                        <a href="shkodra.html" class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="shkodra.html#about" class="nav-link">About</a>
+                    </li>
+                    <li>
+                        <a href="shkodra.html#destinations" class="nav-link">Destinations</a>
+        
+                    </li>
+                    <li>
+                        <a href="shkodra.html#activities" class="nav-link">Activities</a>
+                    </li>
+                    <li>
+                        <a href="shkodra.html#gallery" class="nav-link">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="register.html" class="nav-link">Register</a>
+                    </li>
+                </ul>
+             <div class="burger">
+             	<div class="line1"></div>
+             	<div class="line2"></div>
+             	<div class="line3"></div>
+             </div>
+            </nav>
+        </div>
+    </header>
+<!--END NAVBAR-->
+
+<!--Vertical NAV---------------------------------------------------------------->
+ <div id="mySidenav" class="sidenav">
+  <a href="kalajaa.html" id="sidekalaja">Kalaja e Rozafës<i class="fab fa-fort-awesome"></i></a>
+  <a href="shiroke.html" id="sideshiroke">Shirokë<i class="fas fa-water"></i></a>
+  <a href="theth.html" id="sidetheth">Theth<i class="fas fa-mountain"></i></a>
+  <a href="lumi.html" id="sidelumi">Lumi i Shalës<i class="fas fa-ship"></i></a>
+   <a href="razem.html" id="siderazem">Razëm<i class="fas fa-tree"></i></a>
+    <a href="velipoje.html" id="sidevelipoje">Velipojë<i class="fas fa-swimmer"></i></a>
+</div>
+
+<!--Parallax img---------------------------------------------------------------------->
+<div id="parallax-img"> </div>
+
+<!--Title----------------------------------------------------------------------------->
+  <h1 class="title">Razëm</h1>
+
+  <!--Timeline------------------------------------------------------------------------>
+<div class="timeline">
+	<ul>
+		<li>
+			<div class="content">
+				<h3>Historia</h3>
+				<p>Razma është një ndër pikat turistike më të afërta me qytetin e Shkodrës. Ndodhet në komunën e Shkrelit, në një distancë 43 km larg qytetit dhe 65 km larg bregdetit (Velipoja). Zona e Razmës është rreth 900 m mbi nivelin e detit. Kjo është shumë e përshtatshme për zhvillimin e turizmit malor veror dhe dimëror.Historikisht kjo zonë ka qenë bjeshka për verrin e zonës përreth fshatit Vrith dhe është shfrytëzuar edhe nga shumë tregtarë nga qyteti i Shkodrës. Një nga vendet e bukura malore të Shqipërisë e cila është zbuluar që në shek. XIX nga të huajt. Të parët që e kanë vlerësuar bukurinë dhe pasurinë e saj natyrore ishin botanisti italian Antonio Baldoci, austriaku Dofler, dhe gjeologu Boran Nopce.Rreth viteve 1920 filloi të shfrytëzohet nga barinjtë për stane verore dhe me rritjen e standardeve të jetesës, tregtarët shkodranë ndërtuan atje shtëpitë e tyre verore. Në vitin 1953 kjo zonë u shtetëzua dhe u krijua kampi i pushimit të punëtorëve i cili zgjati aktivitetin e vet deri në vitin 1990. Gjatë kësaj periudhe zona është shfrytëzuar si kamp pushimi veror për punëtorë dhe si pikë ekskursionesh për periudhën dimërore.</p>
+			</div>
+			<div class="time">
+				<h4>1920-1990</h4>
+			</div>
+		</li>
+		<li>
+			<div class="content">
+				<h3>Gjeografia</h3>
+				<p>Relievi i Razmës ndërtohet tërësisht prej shkëmbinjve karbonatikë të mesozoit me një strukturë bllokore tipike të ngritur mbi 1500 m lartësi, shkalla e lartë e tretshmërisë së këtyre shkëmbinjve ka bërë që në relievin alpin të Razmës, vendin kryesor ta zëjë morfologjia karstike. Ky reliev përfaqësohet nga fushat (e Razmës, Troshanit, Fusha e Zezë) në trajtën e gropave, hingave dhe shpellave karstike ku këto të fundit përbëjnë një objekt turistik me vlerë për eksplorimin e tyre. Gjurmët e veprimtarisë së akujve të kuatërnarit i gjejmë në Fushën e Zezë, atë të Razmës, dhe depozitive midis Razmës e Vrithit. Format më të mprehta të relievit me vlera turistike (alpinizëm, piknike etj) në këtë zonë i përkasin kurrizit malor Veleçik (1724 m) - Kunorë (1713 m) në veri të Razmës dhe Kunorës së Zagorës (1862 m) në lindje të saj. Relievi malor i Razmës me pyjet impresionuese të ahut e pishës, ajrin e pastër dhe të freskët sidomos gjatë verës e dimrit, përmban në vetvete vlera turistike të veçanta. Larmia e kafshëve dhe e shpendëve të egjër në këtë zonë, përbën një mundësi të mirë për zhvillimin e gjuetisë.Këtu ka disa ekosisteme të paprekura që shihen shumë thjeshtë.</p>
+			</div>
+		</li>
+		<li>
+			<div class="content">
+				<h3>Turizmi gjeografik</h3>
+				<p>Turizëm shkencor (gjeografik, turistik, historik, etnografik, biologjik, zoologjik, spelologjik)
+         Turizmi gjeografik me larminë e objekteve gjeografike në majat e ndryshme të kësaj zone si maja e Veleçikut, maja e Kunorës, etj.</p>
+			</div>
+		</li>
+		<li>
+			<div class="content">
+				<h3>Turizmi gjeologjik</h3>
+				<p>Turizmi gjeologjik me karakteristikat gjeologjike të kësaj zone mund të themi se depozitimet e ndryshme të mesozoit, të kenozoit dhe në pjesën më të madhe të kuaternarit si dhe thyerjet tektonik tërthore e afrogjatësore të kësaj zone kanë një interes studimor për studiuesit e kësaj fushe.</p>
+			</div>
+		</li>
+		<li>
+			<div class="content">
+				<h3>Turizmi historik</h3>
+				<p>Turizmi historik: popullsia e kësaj zone ka zhvilluar një luftë të vazhdueshme kundër pushtuesve të ndryshëm, (turqit, serbët, malazezët) prandaj studimi i historisë së kësaj zone dhe nxjerrja në pah i saj kanë një interes historik.</p>
+			</div>
+		</li>
+    <li>
+    <div class="content">
+        <h3>Turizmi etnografik</h3>
+        <p>Turizmi etnografik: Zona e Razmës ofron vlera të papërsëritshme studimore për etnografët. Vetë veshja karakteristike e kësaj zone, për burrat këmisha e gjatë me Dallomë (xhamadan prej shajaku) dhe për gratë e vajzat xhubleta 3000 vjeçare, vetë karakteristikat e banesavet ku ato shquhen për një zgjidhje të thjeshtë dhe drejtim arkitektonik dhe dekorativ të varfër.Ceremoniali i dasmës ku ishte zakon që dhëndërri ditën e dasmës të vishej me rrobet më të vjetra e të shkonte me bagëti ose të fshihej në shtëpinë e ndonjë shokut. Me zbritjen e nuses nga kali i vihej në prehër një djalë i vogël (që nusja të lindte sa më shumë djem) por edhe për ceremonitë e tjera të jetës së përditshme mendojmë se interesi studimor është mjaft i madh, ka traditë këngën me lahutë, atë maje krahu (me jehona), ninullat, fyellin.</p>
+      </div>
+    </li>
+    <li>
+    <div class="content">
+        <h3>Turizmi spelologjik</h3>
+        <p>Turizmi spelologjik: i promovuar nga SHOQATA E ALPEVE SHQIPTARE (SHASH) fillon tek Shpella e majës së Veleçikut, është e madhe, 28 m e thellë vertikalisht, Shpella e Lugjeve në V-L të fshatit të Razmës, e cila ka një zhvillim gjatësor me ngritje 10° me gjatës 79 m në fund degëzohet në dy drejtime të ngushta. Ujërat që rrjedhin këtu janë ujëra të pastra, të pijshëm, që formojnë burimet e grykës së Lugjeve mund të vizitohet edhe nga amatorë e vizitorë të thjeshtë.Edhe sporti i gjuetisë mund të aplikohet këtu për turistët që ìa ka ënda, sepse larmia e kafshëve dhe e shpendëve të egjër është e lloj-llojshme, e gjuetia në këto zona është shumë e përshtatshme.Në këtë zonë mund të aplikohen sporte të tjera: si gara e shëtitje me kuaj, biçikleta, etj.Gjatë dimrit ka hapësira të volitshme për ski, sidomos në Fushën e Zezë, si dhe fushat sportive të kampit të Razmës. Kjo zonë ofron mundësi për zhvillimin e turizmit familjar.</p>
+      </div>
+    </li>
+    <li>
+    <div class="content">
+        <h3>Foto</h3>
+        <div class="img-comp-container"><!--Image Comparison Slider---------->
+  <div class="img-comp-img">
+    <img src="photo/razem1.jpg" width="600" height="400">
+  </div>
+  <div class="img-comp-img img-comp-overlay">
+    <img src="photo/razem.jpg" width="600" height="400">
+  </div>
+</div>
+      </div>
+    </li>
+		<div style="clear: both;"></div>
+	</ul>
+</div>
+
+<!--Footer-->
+<div class="footer">
+	<h6>Copyright &copy; 2020, Designed by Brisalda Dushaj</h6>
+</div>
+<!--End footer-->
+
+
+<script type="text/javascript">
+    	//Nav 
+        window.addEventListener('scroll', function () {
+            let header = document.querySelector('header');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition);
+        })
+   
+    const navSlide = () => {
+    	const burger = document.querySelector('.burger');
+    	const nav = document.querySelector('.nav-list');
+        const navList = document.querySelectorAll('.nav-list li');
+       
+    	burger.addEventListener('click',()=>{
+    		//Toggle nav
+            nav.classList.toggle('nav-active');
+    	
+    	//Burger Animation
+    	burger.classList.toggle('toggle');
+        });
+}
+
+    navSlide();
+    //End Nav
+/*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+initComparisons();
+  
+</script>
+</body>
+</html>

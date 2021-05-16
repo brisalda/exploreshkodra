@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome | Register</title>
+	<!--meta tags are used to specify character set, page description, keywords, author of the document, and viewport settings.-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--important-->
+	  <link rel="stylesheet"  href="kalaja.css">
+	  <meta name="description" content="Nje website qe sherben si guide">
+	<meta name="keywords" content="qyetet, shiperi, veri, bicikleta, guide, shkodra">
+	<meta name="author" content="Brisalda Dushaj">
+	  <!--Font Awesome Icons CDN-->
+	  <link rel="stylesheet" type="text/css" href="register.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<script type="text/javascript" src="validation.js"></script>
+	</head>
+<body>
+
+<!--NAVBAR-->
+<header>
+        <div class="container">
+            <nav class="nav">
+            	
+            		
+                <a href="shkodra.html" class="logo">SHKODRA.</a>
+                <ul class="nav-list">
+                    <li>
+                        <a href="shkodra.html" class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="shkodra.html#about" class="nav-link">About</a>
+                    </li>
+                    <li>
+                        <a href="shkodra.html#destinations" class="nav-link">Destinations</a>
+        
+                    </li>
+                    <li>
+                        <a href="shkodra.html#activities" class="nav-link">Activities</a>
+                    </li>
+                    <li>
+                        <a href="shkodra.html#gallery" class="nav-link">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="register.html" class="nav-link">Register</a>
+                    </li>
+                </ul>
+             <div class="burger">
+             	<div class="line1"></div>
+             	<div class="line2"></div>
+             	<div class="line3"></div>
+             </div>
+            </nav>
+        </div>
+    </header>
+<!--END NAVBAR-->
+
+<!--Attached Side nav for destinations------------------------------------------->
+    <div id="mySidenav" class="sidenav">
+  <a href="kalajaa.html" id="sidekalaja">Kalaja e Rozafes<i class="fab fa-fort-awesome"></i></a>
+  <a href="shiroke.html" id="sideshiroke">Shiroke<i class="fas fa-water"></i></a>
+  <a href="theth.html" id="sidetheth">Theth<i class="fas fa-mountain"></i></a>
+  <a href="lumi.html" id="sidelumi">Lumi i Shales<i class="fas fa-ship"></i></a>
+   <a href="razem.html" id="siderazem">Razem<i class="fas fa-tree"></i></a>
+    <a href="velipoje.html" id="sidevelipoje">Velipoje<i class="fas fa-swimmer"></i></a>
+</div>
+
+<!--Register--------------------------------------------------------------------->
+<div id="header" align="center">Register to be informed...</div>
+<div class="form-style">
+	<h2>Please fill all fields</h2>
+	<form name="form1" method="post" action="#" onsubmit="return fncValidate();" autocomplete="off">
+		<table align="center" width="400" border="1">
+			<tr>
+				<td width="125">&nbsp;Firstname</td>
+				<td width="180"><div class="input-group">
+					<input type="text" name="fname" size="20">
+				</div></td>
+			</tr>
+					<tr>
+						<td width="125">&nbsp;Lastname</td>
+				<td width="180"><div class="input-group">
+					<input type="text" name="lname" size="20">
+				</div></td>
+					</tr>
+					<tr><td>Gender:</td><td><span id="gen"><input type="radio" name="gender" value="male" id="male">Male
+                    <input type="radio" name="gender" value="female" id="female">Female</span></td></tr>
+                    <tr><td>Address:</td><td><textarea name="address" class="textarea-field"></textarea></td></tr>
+                    <tr><td>Country:</td><td><div class="input-group">
+                    	<select id="country">
+                    		<option value="">Choose e country</option>
+                    		<option value="alb">Albania</option>
+                    		<option value="gb">Great Britain</option>
+                    		<option value="aus">Australia</option>
+                    	</select>
+                    </div></td></tr>
+                    <tr>
+                    	<td>&nbsp;Mobile No:</td>
+                    	<td><div class="input-group"><input type="text" name="phone"></div>
+                    	</td>
+                    </tr>
+                    <tr>
+                    	<td>&nbsp;Email:</td>
+                    	<td><div class="input-group"><input type="text" name="email"></div>
+                    	</td>
+                    </tr>
+                    <tr><td></td></tr><input type="submit" name="Submit" value="Submit" class="btn">&nbsp;&nbsp;
+                    <input type="reset" name="reset" value="Reset" class="btn"></td></tr>
+			</table>
+	        </form>
+            </div>
+
+
+
+</body>
+</html>

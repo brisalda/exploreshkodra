@@ -1,0 +1,304 @@
+
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body,html{
+	height: 100%;
+	box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color .5s ease;
+    z-index: 1000;
+
+}
+/* For styling Navbar*/
+.container{
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    font-size: 10px;
+}
+
+.nav{
+    width: 100%;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(255,255,255,.05);
+    transition: height .5s ease;
+}
+
+.nav a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+}
+
+.nav .logo{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    margin-right: auto;
+    margin-left: 4rem;
+}
+
+.nav-link{
+    margin: 0 2rem;
+    position: relative;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: #000;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.nav-link::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s ease;
+}
+
+.nav-link:hover::after{
+    transform: scaleX(1);
+}
+
+
+/*Apply styles after scroll*/
+.scrolling-active{
+    background-color: #fff;
+    box-shadow: 0 3px 1rem rgba(0,0,0,.1);
+}
+
+.scrolling-active .nav{
+    height: 6.6rem;
+}
+
+.scrolling-active .nav a{
+    color: #313131;
+}
+
+.scrolling-active #nav-cta{
+    background-color: #313131;
+    color: #fff;
+}
+
+
+.scrolling-active .nav-link::after{
+    background-color: #313131;
+}
+/* Fixed/sticky nav bar (vertically aligned) */
+#mySidenav i{
+  position: absolute;
+  right: 10px;
+}
+#mySidenav a {
+  position: fixed;
+  left: -167px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 200px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  z-index: 1;
+
+}
+
+#mySidenav a:hover {
+  left: 0;
+}
+
+#sidekalaja {
+  top: 320px;
+  background-color: #4CAF50;
+}
+
+#sideshiroke {
+  top: 380px;
+  background-color: #2196F3;
+  text-align: center;
+}
+
+#sidetheth {
+  top: 440px;
+  background-color: #f44336;
+  text-align: center;
+}
+
+#sidelumi {
+  top: 500px;
+  background-color: #555;
+}
+
+#siderazem {
+  top: 560px;
+  background-color: #22b2b2;
+  text-align: center;
+}
+
+#sidevelipoje {
+  top: 620px;
+  background-color: #22b26a;
+  text-align: center;
+}
+
+#header {
+ background:#00a2d1;
+ width:100%;
+ height:50px;
+ color:#fff;
+ font-size:36px;
+ padding-top: 150px;
+ padding-bottom: 100px;
+}
+
+/*For styling a form*/
+.form-style{ 
+ font-family: 'Open Sans Condensed', arial, sans;
+ width: 500px;
+ padding: 50px;
+ background: #FFFFFF;
+ margin: 50px auto;
+ box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+ -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+ -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+
+}
+
+/*For styling a form heading*/
+.form-style h2{ 
+ background: crimson;
+ font-family: 'Open Sans Condensed', sans-serif;
+ color: #FFFFFF;
+ font-size: 18px;
+ font-weight: 100;
+ padding: 20px;
+ margin: -30px -30px 30px -30px;
+}
+
+/* For styling a textarea-field*/
+.form-style .textarea-field{ 
+ height:100px;
+ width: 230px;
+ border-radius: 5px;
+}
+
+ .input-group{
+ margin: 10px 0px 10px 0px;
+ }
+ 
+/* For styling an input text field*/
+ .input-group input{ 
+ height:30px;
+ width: 93%;
+ padding: 5px 10px;
+ font-size:16px;
+  border-radius: 5px;
+   border: 1px solid gray;
+   }
+   
+   /* For styling a menu field*/
+   .input-group select{ 
+    width: 95%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    }
+ 
+ /* For styling a button*/
+   .btn{  
+    padding:10px;
+    margin-bottom: 10px;
+ font-size:15px;
+ color:#FFFFFF;
+ background: crimson;
+   border-radius: 5px;
+   border: none;
+   }
+
+/* For styling footer*/
+.footer
+  {
+  padding: 10px;
+  background: #fff;
+  color: #000;
+  font-size: 20px;
+  text-align: center;
+  } 
+/*Responsive Navbar*/
+@media screen and (max-width: 768px){
+    body{
+        overflow-x: hidden;
+    }
+   .nav-list{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+   }
+ 
+   .burger{
+    display: block;
+   }
+.nav-list li{
+    margin: 40px
+}
+.nav-active{
+    transform: translateX(0%);
+}
+
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+}

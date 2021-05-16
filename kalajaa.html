@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome | Kalaja e Rozafes</title>
+	<!--meta tags are used to specify character set, page description, keywords, author of the document, and viewport settings.-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--important-->
+	  <link rel="stylesheet"  href="kalaja.css">
+	  <meta name="description" content="Nje website qe sherben si guide">
+	<meta name="keywords" content="qyetet, shiperi, veri, bicikleta, guide, shkodra">
+	<meta name="author" content="Brisalda Dushaj">
+	  <!--Font Awesome Icons CDN-->
+	  <link rel="stylesheet" type="text/css" href="kalajaa.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+<script>
+
+	 function initComparisons() {
+  var x, i;
+  /* Find all elements with an "overlay" class: */
+  x = document.getElementsByClassName("img-comp-overlay");
+  for (i = 0; i < x.length; i++) {
+    /* Once for each "overlay" element:
+    pass the "overlay" element as a parameter when executing the compareImages function: */
+    compareImages(x[i]);
+  }
+  function compareImages(img) {
+    var slider, img, clicked = 0, w, h;
+    /* Get the width and height of the img element */
+    w = img.offsetWidth;
+    h = img.offsetHeight;
+    /* Set the width of the img element to 50%: */
+    img.style.width = (w / 2) + "px";
+    /* Create slider: */
+    slider = document.createElement("DIV");
+    slider.setAttribute("class", "img-comp-slider");
+    /* Insert slider */
+    img.parentElement.insertBefore(slider, img);
+    /* Position the slider in the middle: */
+    slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+    slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+    /* Execute a function when the mouse button is pressed: */
+    slider.addEventListener("mousedown", slideReady);
+    /* And another function when the mouse button is released: */
+    window.addEventListener("mouseup", slideFinish);
+    /* Or touched (for touch screens: */
+    slider.addEventListener("touchstart", slideReady);
+     /* And released (for touch screens: */
+    window.addEventListener("touchstop", slideFinish);
+    function slideReady(e) {
+      /* Prevent any other actions that may occur when moving over the image: */
+      e.preventDefault();
+      /* The slider is now clicked and ready to move: */
+      clicked = 1;
+      /* Execute a function when the slider is moved: */
+      window.addEventListener("mousemove", slideMove);
+      window.addEventListener("touchmove", slideMove);
+    }
+    function slideFinish() {
+      /* The slider is no longer clicked: */
+      clicked = 0;
+    }
+    function slideMove(e) {
+      var pos;
+      /* If the slider is no longer clicked, exit this function: */
+      if (clicked == 0) return false;
+      /* Get the cursor's x position: */
+      pos = getCursorPos(e)
+      /* Prevent the slider from being positioned outside the image: */
+      if (pos < 0) pos = 0;
+      if (pos > w) pos = w;
+      /* Execute a function that will resize the overlay image according to the cursor: */
+      slide(pos);
+    }
+    function getCursorPos(e) {
+      var a, x = 0;
+      e = e || window.event;
+      /* Get the x positions of the image: */
+      a = img.getBoundingClientRect();
+      /* Calculate the cursor's x coordinate, relative to the image: */
+      x = e.pageX - a.left;
+      /* Consider any page scrolling: */
+      x = x - window.pageXOffset;
+      return x;
+    }
+    function slide(x) {
+      /* Resize the image: */
+      img.style.width = x + "px";
+      /* Position the slider: */
+      slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+    }
+  }
+}
+</script>
+
+</head>
+<body>
+
+<!--NAVBAR----------------------------------------------------------------------->
+<header>
+        <div class="container">
+            <nav class="nav">
+                <a href="shkodra.html" class="logo">SHKODRA.</a>
+                <ul class="nav-list">
+                    <li>
+                        <a href="shkodra.html" class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="shkodra.html#about" class="nav-link">About</a>
+                    </li>
+                    <li>
+                        <a href="shkodra.html#destinations" class="nav-link">Destinations</a>
+        
+                    </li>
+                    <li>
+                        <a href="shkodra.html#activities" class="nav-link">Activities</a>
+                    </li>
+                    <li>
+                        <a href="shkodra.html#gallery" class="nav-link">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="register.html" class="nav-link">Register</a>
+                    </li>
+                </ul>
+             <div class="burger">
+             	<div class="line1"></div>
+             	<div class="line2"></div>
+             	<div class="line3"></div>
+             </div>
+            </nav>
+        </div>
+    </header>
+<!--END NAVBAR----------------------------------------------------------------->
+
+
+<!--Vertical nav for destinations------------------------------------------->
+   <div id="mySidenav" class="sidenav">
+  <a href="kalajaa.html" id="sidekalaja">Kalaja e Rozafës<i class="fab fa-fort-awesome"></i></a>
+  <a href="shiroke.html" id="sideshiroke">Shirokë<i class="fas fa-water"></i></a>
+  <a href="theth.html" id="sidetheth">Theth<i class="fas fa-mountain"></i></a>
+  <a href="lumi.html" id="sidelumi">Lumi i Shalës<i class="fas fa-ship"></i></a>
+   <a href="razem.html" id="siderazem">Razëm<i class="fas fa-tree"></i></a>
+    <a href="velipoje.html" id="sidevelipoje">Velipojë<i class="fas fa-swimmer"></i></a>
+</div>
+
+<!--Parallax img-->
+<div id="parallax-img"> </div>
+
+  <h1 class="title">Kalaja e Rozafës</h1>
+  <!--Timeline----------------------------------------------------------------------->
+<div class="timeline">
+	<ul>
+		<li>
+			<div class="content">
+				<h3>Legjenda</h3>
+				<p> Sipas legjendës së dhimbshme, ndërtimi i Kalasë ishte i mallkuar prej perëndive të cilat shembnin çdo natë ndërtimin e çdo dite. Për të lejuar qëndrimin e mureve të kalasë, ato kërkuan një sakrificë e cila padrejtësisht u vendos të ishte Rozafa, nusja më e vogël e shtëpisë. Përpara se të vetësakrifikohej e të murosej e gjallë, Rozafa tregoi heroizmin dhe altruizmin e saj duke kërkuar që gjysma e trupit të saj të mbetej jashtë murit, në mënyrë që të ushqente e të kujdesej për foshnjen e saj. Një skulpturë e bukur e figurës së Rozafës e gdhendur brenda murit të saj gjendet në hyrje të kalasë. Ndërsa kalaja përmendet gjatë sundimit të mbretit ilir Gent, emrin Rozafa e hasim së pari gjatë mesjetës.</p>
+			</div>
+			<div class="time">
+				<h4>1215</h4>
+			</div>
+		</li>
+		<li>
+			<div class="content">
+				<h3>Historia</h3>
+				<p>Prej pozicionit të vet, kodra ka qenë e banuar që nga antikiteti. Ka qenë qendër e fortifikuar ilire dhe u pushtua nga romakët më 168 para Krishtit. Historiani Tit Livi e quante "vendi më i fortë i labeatëve". Në veprën De Aedificis të Prokopit të Çezaresë përmendet Skydreonopolis në grupin e fortesave të rindërtuara në kohën e Justinianit.Sipas kronika, kalaja iu pushtua njëherë Balshajve nga osmanët më 1392. Osmanët ia dhanë dhuratë Balshës, i falënderuar nga Sulltan Murati II sepse i kishte dërguar për harem një vajzë shumë të bukur. Balsha hoqi dorë nga qyteti dhe ia kaloi Republikës së Venedikut, kohë në të cilën zhvillohen punime fortifikuese dhe ndërtohet Barbakania në vitet 1407-1414. I gjithë kompleksi i hyrjes përfundoi së ndërtuari më 1468.</p>
+			</div>
+			<div class="time">
+				<h4>168p.k-1468</h4>
+			</div>
+		</li>
+		<li>
+			<div class="content">
+				<h3>Periudha osmane</h3>
+				<p>"Kalaja çohet mbi një shkamb të naltë e të rreptë buzë liqenit të madh dhe lumit Buna. Ka katër kande, por pak si e gjatë, e ndërtueme me gurë të gdhendun, e papengueme nga ndonjë mal. Asht fortesë e plotë, por e vogël. Nuk ka hendeqe, por ka plot kulla, dhambë e bedena (pirgje), ka dy porta, njena vështron fushën e vogël, brenda kësaj porte asht tyrbja e Mujo Babës. Në këtë kala ka pak shtëpi dhe vetëm një xhami, ajo e Sulltan Muhammedit, e cila është e ndërtuar me tjegulla dhe e ndërtuar sipas stilit të vjetër. Fortesa ka 7 a 8 saranxha plot me ujë shiu. Prej kalasë deri në liqen ka rrugë nëndhese, të cilat i dinë vetëm njerëzit e kalasë që mbushin ujë përmes tyne në raste rrethimi. Brenda në kala nuk ka dyqane, ka vetëm 100 banesa ushtarësh, ka depo për grunë e municione edhe ka shumë topa".Më 1787 ushtria osmane rrethoi Kara Mahmud Pashën, ku Bushatlliu doli ngadhënjimtar; po ashtu veziri i fundit i Shkodrës, Mustafa Pasha u rrethua më 1830 nga ushtria osmane dhe në fund u dorëzua për mungesë buke e municioni. Deri më 1858 valiu kishte selinë e vet në kala dhe deri më 1865 si qendër administrative, më pas mbeti vetëm garnizoni i rregullt osman.</p>
+			</div>
+			<div class="time">
+				<h4>1787</h4>
+			</div>
+		</li>
+		<li>
+			<div class="content">
+				<h3>Struktura</h3>
+				<p>Sipërfaqja e brendshme e kalasë ndahet nga muret e tre oborreve, me porta mes tyre. Oborri i tretë, i cili është më i vogël se të tjerët, ndodhet në pjesën më të lartë të kodrës. Në muret dalës të tij, ka të dala drejtkëndëshe që zëvendësojnë kullat, ndërsa në murin e jashtëm, kullat janë më të dendura. Brenda kështjellës ka disa ambiente që lidhen me një kullë rrethore, një depo si dhe një godinë trekatëshe të kohës veneciane. Oborri i dytë zë pjesën qendrore dhe më të madhe të kalasë duke u ndarë nga oborri i parë me një mur tërthor pa kulla.Brenda tij ndodhen katër depozita për grumbullimet e ujit, katërkëndëshe të mbuluara me qemerë, prej të cilave uji merrej përmes grykave të puseve rrethore. Aty ruhen dhe një depo, një burg si dhe një kishë e kthyer më vonë në xhami. </p>
+			</div>
+			<div class="time">
+				<h4>...</h4>
+			</div>
+		</li>
+		<li>
+			<div class="content">
+				<h3>Braktisja e kalase</h3>
+				<p>Deri në vitin 1858 pallati ka shërbyer si banesë e Valiut të qytetit. Bushatllijt vunë dorë edhe në Kala kryesisht në kulla mbrojtëse dhe vrojtimi siç është ajo në jug-perëndim të kështjellës e ndërtuar për të kontrolluar rrugën nga Lezha dhe zonën ku bashkohet lumi Drin me Bunën.Kjo kullë është e pajisur dhe me një dalje të maskuar në raste rrethimi nga Kalaja. Bushatllijve i përket dhe muri që ndan pothuajse në mes kështjellën i pajisur dhe me portë hyrëse me qemer të trefisht. Përfundimisht Kalaja e Rozafës – Shkodrës u braktis në vitin 1865 kur administrata e qytetit u shpërngul për në qendrën ku është dhe sot dhe pastaj Kalaja shërbeu vetëm si qendër e garnizonit osman.</p>
+			</div>
+			<div class="time">
+				<h4>1865</h4>
+			</div>
+		</li>
+   <li>
+			<div class="content">
+				<h3>Foto</h3>
+				<div class="img-comp-container"><!--END Image Comparison Slider-->
+  <div class="img-comp-img">
+    <img src="photo/kalaja4.jpg" width="600" height="400">
+  </div>
+  <div class="img-comp-img img-comp-overlay">
+    <img src="photo/kalaja5.jpg" width="600" height="400">
+  </div>
+</div>
+			</div>
+		</li>
+		<div style="clear: both;"></div>
+	</ul>
+</div>
+
+
+<!--Footer-->
+<div class="footer">
+	<h6>Copyright &copy; 2020, Designed by Brisalda Dushaj</h6>
+</div>
+<!--End footer-->
+
+
+<script type="text/javascript">
+    	//Nav 
+        window.addEventListener('scroll', function () {
+            let header = document.querySelector('header');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition);
+        })
+   
+    const navSlide = () => {
+    	const burger = document.querySelector('.burger');
+    	const nav = document.querySelector('.nav-list');
+        const navList = document.querySelectorAll('.nav-list li');
+       
+    	burger.addEventListener('click',()=>{
+    		//Toggle nav
+            nav.classList.toggle('nav-active');
+    	
+    	//Burger Animation
+    	burger.classList.toggle('toggle');
+        });
+}
+
+    navSlide();
+    //End Nav
+/*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+initComparisons();
+  
+</script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome | Theth</title>
+	<!--meta tags are used to specify character set, page description, keywords, author of the document, and viewport settings.-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--important-->
+	  <link rel="stylesheet"  href="kalaja.css">
+	  <meta name="description" content="Nje website qe sherben si guide">
+	<meta name="keywords" content="qyetet, shiperi, veri, bicikleta, guide, shkodra">
+	<meta name="author" content="Brisalda Dushaj">
+	  <!--Font Awesome Icons CDN-->
+	  <link rel="stylesheet" type="text/css" href="theth.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+<script>
+
+	 function initComparisons() {
+  var x, i;
+  /* Find all elements with an "overlay" class: */
+  x = document.getElementsByClassName("img-comp-overlay");
+  for (i = 0; i < x.length; i++) {
+    /* Once for each "overlay" element:
+    pass the "overlay" element as a parameter when executing the compareImages function: */
+    compareImages(x[i]);
+  }
+  function compareImages(img) {
+    var slider, img, clicked = 0, w, h;
+    /* Get the width and height of the img element */
+    w = img.offsetWidth;
+    h = img.offsetHeight;
+    /* Set the width of the img element to 50%: */
+    img.style.width = (w / 2) + "px";
+    /* Create slider: */
+    slider = document.createElement("DIV");
+    slider.setAttribute("class", "img-comp-slider");
+    /* Insert slider */
+    img.parentElement.insertBefore(slider, img);
+    /* Position the slider in the middle: */
+    slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+    slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+    /* Execute a function when the mouse button is pressed: */
+    slider.addEventListener("mousedown", slideReady);
+    /* And another function when the mouse button is released: */
+    window.addEventListener("mouseup", slideFinish);
+    /* Or touched (for touch screens: */
+    slider.addEventListener("touchstart", slideReady);
+     /* And released (for touch screens: */
+    window.addEventListener("touchstop", slideFinish);
+    function slideReady(e) {
+      /* Prevent any other actions that may occur when moving over the image: */
+      e.preventDefault();
+      /* The slider is now clicked and ready to move: */
+      clicked = 1;
+      /* Execute a function when the slider is moved: */
+      window.addEventListener("mousemove", slideMove);
+      window.addEventListener("touchmove", slideMove);
+    }
+    function slideFinish() {
+      /* The slider is no longer clicked: */
+      clicked = 0;
+    }
+    function slideMove(e) {
+      var pos;
+      /* If the slider is no longer clicked, exit this function: */
+      if (clicked == 0) return false;
+      /* Get the cursor's x position: */
+      pos = getCursorPos(e)
+      /* Prevent the slider from being positioned outside the image: */
+      if (pos < 0) pos = 0;
+      if (pos > w) pos = w;
+      /* Execute a function that will resize the overlay image according to the cursor: */
+      slide(pos);
+    }
+    function getCursorPos(e) {
+      var a, x = 0;
+      e = e || window.event;
+      /* Get the x positions of the image: */
+      a = img.getBoundingClientRect();
+      /* Calculate the cursor's x coordinate, relative to the image: */
+      x = e.pageX - a.left;
+      /* Consider any page scrolling: */
+      x = x - window.pageXOffset;
+      return x;
+    }
+    function slide(x) {
+      /* Resize the image: */
+      img.style.width = x + "px";
+      /* Position the slider: */
+      slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+    }
+  }
+}
+</script>
+
+</head>
+<body>
+
+<!--NAVBAR-->
+<header>
+        <div class="container">
+            <nav class="nav">
+            	
+            		
+                <a href="shkodra.html" class="logo">SHKODRA.</a>
+                <ul class="nav-list">
+                    <li>
+                        <a href="shkodra.html" class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="shkodra.html#about" class="nav-link">About</a>
+                    </li>
+                    <li>
+                        <a href="shkodra.html#destinations" class="nav-link">Destinations</a>
+        
+                    </li>
+                    <li>
+                        <a href="shkodra.html#activities" class="nav-link">Activities</a>
+                    </li>
+                    <li>
+                        <a href="shkodra.html#gallery" class="nav-link">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="register.html" class="nav-link">Register</a>
+                    </li>
+                </ul>
+             <div class="burger">
+             	<div class="line1"></div>
+             	<div class="line2"></div>
+             	<div class="line3"></div>
+             </div>
+            </nav>
+        </div>
+    </header>
+<!--END NAVBAR-->
+
+<!--Attached Side nav for destinations------------------------------------------->
+    <div id="mySidenav" class="sidenav">
+  <a href="kalajaa.html" id="sidekalaja">Kalaja e Rozafes<i class="fab fa-fort-awesome"></i></a>
+  <a href="shiroke.html" id="sideshiroke">Shiroke<i class="fas fa-water"></i></a>
+  <a href="theth.html" id="sidetheth">Theth<i class="fas fa-mountain"></i></a>
+  <a href="lumi.html" id="sidelumi">Lumi i Shales<i class="fas fa-ship"></i></a>
+   <a href="razem.html" id="siderazem">Razem<i class="fas fa-tree"></i></a>
+    <a href="velipoje.html" id="sidevelipoje">Velipoje<i class="fas fa-swimmer"></i></a>
+</div>
+
+<!--Parallax img-->
+<div id="parallax-img"> </div>
+
+  <h1 class="title">Theth</h1>
+<div class="timeline">
+	<ul>
+		<li>
+			<div class="content">
+				<h3>Thethi</h3>
+				<p>Thethi është një fshat në njësisë administrative Shalë në rrethin e Shkodrës të Shqipërisë. Pas reformës së qeverisjes lokale të vitit 2015, ajo u bë pjesë e rrethit Shkodër dhe u shpall Qendër e Mbrojtur Historike nga Qeveria Shqiptare.[2][3] Fshati është qendra e Parkut Kombëtar të Thethit, një zonë me bukuri natyrore të dalluara.Fshati ndodhet më në veri të luginës së Shalës, në mes të Alpeve me një bukuri të rallë, në Veri të Shqipërisë. Shtatëdhjetë kilometra nga qyteti i Shkodrës, i mbrojtur nga tre malet Radohima, Sheniku, Papluku, me lartësi mbi 2500m mbi nivelin e detit, shtrihet lugina e lartë e Thethit, një nga zonat më të veçanta të këtyre Alpeve, 750 deri 950 m mbi nivelin e detit, me një sipërfaqe prej 2630 hektarësh.</p>
+			</div>
+		</li>
+		<li>
+			<div class="content">
+				<h3>Nga emri "thep"</h3>
+				<p>Thethi ndodhet midis malesh të larta dhe të thepisura. Njerëzit duke punuar, kullotur bagëtinë, gjuajtur e te tjera, shpreheshin : “Në ata thepa kullota bagëtinë”, “Po shkoj në ata thepa për të gjuajtur”, “...në thepa...”, “...thepa...” e të tjera. Në këtë fshat ka shumë vende që emërtohen dhe rreth fjalës “thep-a, -i, -at” si: “Thepi i Krysë”, “Thepi i Rrgadhës”, “Thepi i Kodrës Botës” e të tjera. Në kuptimin që emërton fjala “kuj” (kunj) pothuaj është shumë e përafërt me fjalën “thep”. Toponime me fjalën “kuj” ka më shumicë, p.sh. “Kuji i Dhive”, “Kuji i Lopëve”, “Kuji i Shqypes”, “Kuji i Zhareve”, ‘Kuji i Nenave”, “Kuji i Rupës”, “Kuji i Praçes”, “Kuji i Pulave” etj.Krahas këtyre, malet e larta dhe të mprehta si “thika” që njerëzit në mënyrë të zakonshme e përdorin shprehjen “...në thika të majave...”, “...në thika...”, “...prapa atyre thikave që duken...”, e te tjera, mund të shkojnë në favor të prejardhjes së emrit Theth nga fjala “thep” i cili ka përparësi me emrat “kunj” dhe “thika” në kuptimin e vendit që emërtojnë.</p>
+			</div>
+      <div class="time">
+        <h4>Prejardhja e Emrit</h4>
+      </div>
+		</li>
+		<li>
+			<div class="content">
+				<h3>Historia</h3>
+				<p>Në vitin 1976, Thethi shpallet “Park Kombëtar”. Pas ndryshimeve të ‘90–tës, hoteli funksionon vetëm pjesërisht me një kapacitet prej 30 shtretërish dhe është privatizuar. Deri në vitin 1997, hoteli, që sot mban emrin Frashnishta, ka pritur e përcjellë shumë pushues vendas e të huaj, por me trazirat që përfshinë gjithë vendin u prish edhe rregulli i frekuentimit të zonës turistike të Thethit.Bukuritë e papërsëritshme të këtij fshati malor në zemër të Alpeve shqiptare, e bëjnë Thethin që të zërë një vend të rëndësishëm në natyrën dhe turizmin shqiptar. Duke u nisur nga veçoritë e tij dhe nga vendndodhja pranë kufirit, Parku Kombëtar i Thethit është propozuar që të jetë pjesë e një parku ndërballkanik të quajtur Parku i Paqes, ku të përfshihen territore edhe nga Kosova dhe Mali i Zi.</p>
+			</div>
+      <div class="time">
+        <h4>1976</h4>
+      </div>
+		</li>
+		<li>
+			<div class="content">
+				<h3>Turizmi</h3>
+				<p>Pasuritë natyrore të kësaj zone janë të lidhura së bashku edhe me trashëgiminë kulturore dhe historike të banorëve vendas, duke formuar kështu, bazat më të rëndësishme për zhvillimin e turizmit. Lidhur me këtë fakt ka shkruar edhe alpinisti Georg Heinshemer, i cili e ka konsideruar Thethin, padyshim, vendin më të përshtatshëm për turizëm ndër Bjeshkët e Veriut të Shqipërisë, duke e krahasuar atë me viset e bukura të Tirolit, Austri.Ndërsa për banorët e kësaj zone, Dr. Franc Nopca ka shkruar se ”po t’u biesh në besë, në asnjë vend tjetër të botës nuk do të ndihesh më i sigurt”. Resurset natyrore i dallon çdo vizitor, sa lë Grykën e Ndërlysës dhe ballafaqohet me mrekullinë e kanionit të Grunasit që është rreth 2 km i gjatë, 40 deri 60 m i thellë dhe vetëm 2 deri në 3 m i gjerë.</p>
+			</div>
+		</li>
+		<li>
+			<div class="content">
+				<h3>Turizmi</h3>
+				<p>Përveç kanionit, në Theth gjenden një numër i konsiderueshëm shpellash, por ato që kanë tërhequr vëmendjen e shumë alpinistëve, speleologëve, gjeografëve etj, janë Shpella e Harapit dhe Bira e Rrathëve, të cilat me përmasat e tyre dhe dukuritë interesante që mbartin brenda tyre si liqenet nëntokësore, galeri, sifone etj., janë bërë shkak i shumë legjendave të krijuara nga vetë banorët e zonës. Një bukuri natyrore, të veçantë, të bjeshkëve të veriut, shpalos në këtë zone, Ujëvara e Thethit me lartësi 25 m, ku së bashku me cirqet përreth dhe Mullirin e Blojës, formojnë një nga vendet më interesante për t’u vizituar. Por jo më pak tërheqës është edhe vendburimi i lumit të Shalës në Okol, burimet e të cilit nxjerrin 2.5 deri në 3 m kub ujë në sekondë, që vë në punë një hidrocentral të vogël dhe 12 mullinj, që shërbejnë për ujë të pijshëm, cilësia dhe pastërtia e të cilit është për t’u admiruar.</p>
+			</div>
+		</li>
+    <li>
+      <div class="content">
+        <h3>Foto</h3>
+        <div class="img-comp-container">
+  <div class="img-comp-img">
+    <img src="photo/thethi.jpg" width="500" height="600">
+  </div>
+  <div class="img-comp-img img-comp-overlay">
+    <img src="photo/thethi2.jpg" width="500" height="600">
+  </div>
+</div>
+      </div>
+    </li>
+		<div style="clear: both;"></div>
+	</ul>
+</div>
+
+
+
+
+
+
+
+
+<!--Footer-->
+<div class="footer">
+	<h6>Copyright &copy; 2020, Designed by Brisalda Dushaj</h6>
+</div>
+<!--End footer-->
+<script type="text/javascript">
+    	//Nav 
+        window.addEventListener('scroll', function () {
+            let header = document.querySelector('header');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition);
+        })
+   
+    const navSlide = () => {
+    	const burger = document.querySelector('.burger');
+    	const nav = document.querySelector('.nav-list');
+        const navList = document.querySelectorAll('.nav-list li');
+       
+    	burger.addEventListener('click',()=>{
+    		//Toggle nav
+            nav.classList.toggle('nav-active');
+    	
+    	//Burger Animation
+    	burger.classList.toggle('toggle');
+        });
+}
+
+    navSlide();
+    //End Nav
+/*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+  initComparisons();
+  
+</script>
+</body>
+</html>

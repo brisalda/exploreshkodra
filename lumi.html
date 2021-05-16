@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome | Lumi i Shales</title>
+	<!--meta tags are used to specify character set, page description, keywords, author of the document, and viewport settings.-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--important-->
+	  <link rel="stylesheet"  href="kalaja.css">
+	  <meta name="description" content="Nje website qe sherben si guide">
+	<meta name="keywords" content="qyetet, shiperi, veri, bicikleta, guide, shkodra">
+	<meta name="author" content="Brisalda Dushaj">
+	  <!--Font Awesome Icons CDN-->
+	  <link rel="stylesheet" type="text/css" href="lumi.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+<script>
+	 function initComparisons() {
+  var x, i;
+  /* Find all elements with an "overlay" class: */
+  x = document.getElementsByClassName("img-comp-overlay");
+  for (i = 0; i < x.length; i++) {
+    /* Once for each "overlay" element:
+    pass the "overlay" element as a parameter when executing the compareImages function: */
+    compareImages(x[i]);
+  }
+  function compareImages(img) {
+    var slider, img, clicked = 0, w, h;
+    /* Get the width and height of the img element */
+    w = img.offsetWidth;
+    h = img.offsetHeight;
+    /* Set the width of the img element to 50%: */
+    img.style.width = (w / 2) + "px";
+    /* Create slider: */
+    slider = document.createElement("DIV");
+    slider.setAttribute("class", "img-comp-slider");
+    /* Insert slider */
+    img.parentElement.insertBefore(slider, img);
+    /* Position the slider in the middle: */
+    slider.style.top = (h / 2) - (slider.offsetHeight / 2) + "px";
+    slider.style.left = (w / 2) - (slider.offsetWidth / 2) + "px";
+    /* Execute a function when the mouse button is pressed: */
+    slider.addEventListener("mousedown", slideReady);
+    /* And another function when the mouse button is released: */
+    window.addEventListener("mouseup", slideFinish);
+    /* Or touched (for touch screens: */
+    slider.addEventListener("touchstart", slideReady);
+     /* And released (for touch screens: */
+    window.addEventListener("touchstop", slideFinish);
+    function slideReady(e) {
+      /* Prevent any other actions that may occur when moving over the image: */
+      e.preventDefault();
+      /* The slider is now clicked and ready to move: */
+      clicked = 1;
+      /* Execute a function when the slider is moved: */
+      window.addEventListener("mousemove", slideMove);
+      window.addEventListener("touchmove", slideMove);
+    }
+    function slideFinish() {
+      /* The slider is no longer clicked: */
+      clicked = 0;
+    }
+    function slideMove(e) {
+      var pos;
+      /* If the slider is no longer clicked, exit this function: */
+      if (clicked == 0) return false;
+      /* Get the cursor's x position: */
+      pos = getCursorPos(e)
+      /* Prevent the slider from being positioned outside the image: */
+      if (pos < 0) pos = 0;
+      if (pos > w) pos = w;
+      /* Execute a function that will resize the overlay image according to the cursor: */
+      slide(pos);
+    }
+    function getCursorPos(e) {
+      var a, x = 0;
+      e = e || window.event;
+      /* Get the x positions of the image: */
+      a = img.getBoundingClientRect();
+      /* Calculate the cursor's x coordinate, relative to the image: */
+      x = e.pageX - a.left;
+      /* Consider any page scrolling: */
+      x = x - window.pageXOffset;
+      return x;
+    }
+    function slide(x) {
+      /* Resize the image: */
+      img.style.width = x + "px";
+      /* Position the slider: */
+      slider.style.left = img.offsetWidth - (slider.offsetWidth / 2) + "px";
+    }
+  }
+}
+</script>
+
+</head>
+<body>
+
+<!--NAVBAR--><header>
+        <div class="container">
+            <nav class="nav">
+            	
+            		
+                <a href="shkodra.html" class="logo">SHKODRA.</a>
+                <ul class="nav-list">
+                    <li>
+                        <a href="shkodra.html" class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="shkodra.html#about" class="nav-link">About</a>
+                    </li>
+                    <li>
+                        <a href="shkodra.html#destinations" class="nav-link">Destinations</a>
+        
+                    </li>
+                    <li>
+                        <a href="shkodra.html#activitites" class="nav-link">Activities</a>
+                    </li>
+                    <li>
+                        <a href="shkodra.html#gallery" class="nav-link">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="register.html" class="nav-link">Register</a>
+                    </li>
+                </ul>
+             <div class="burger">
+             	<div class="line1"></div>
+             	<div class="line2"></div>
+             	<div class="line3"></div>
+             </div>
+            </nav>
+        </div>
+    </header>
+<!--END NAVBAR-->
+
+<!--Vertical NAV--------------------------------------------------------------------------->
+ <div id="mySidenav" class="sidenav">
+  <a href="kalajaa.html" id="sidekalaja">Kalaja e Rozafës<i class="fab fa-fort-awesome"></i></a>
+  <a href="shiroke.html" id="sideshiroke">Shirokë<i class="fas fa-water"></i></a>
+  <a href="theth.html" id="sidetheth">Theth<i class="fas fa-mountain"></i></a>
+  <a href="lumi.html" id="sidelumi">Lumi i Shalës<i class="fas fa-ship"></i></a>
+   <a href="razem.html" id="siderazem">Razëm<i class="fas fa-tree"></i></a>
+    <a href="velipoje.html" id="sidevelipoje">Velipojë<i class="fas fa-swimmer"></i></a>
+</div>
+
+
+<!--Parallax img------------------------------------------------------------------------->
+<div id="parallax-img"> </div>
+
+<!--Title-------------------------------------------------------------------------------->
+  <h1 class="title">Lumi i Shalës</h1>
+
+  <!--Timeline---------------------------------------------------------------------------->
+<div class="timeline">
+	<ul>
+		<li>
+			<div class="content">
+				<h3>Lumi i Shales</h3>
+				<p> Lumi i Shalës është lumi i cili buron rrëzë Alpeve Shqiptare.Ka një gjatësi prej 37 km prej burimit në majën e Radohinës e deri në Dri, buron tek kroi i Shtrazës në krye të fshatit Theth, në rrëzë të majës së Radohinës, nga ku zbret poshtë nëpër luginë të Shalës, nga Thethi, Ndërlysa e Musha, nga Breg-Lumi tek Porta e Shalës (Gryka e Rrshqëmit), nëpër Lotaj e në luginën e Shoshit, dërisa derdhja e tij shkon në Lesniqe në Dri (sot liqeni Koman). Është lumë malor me rënie mesatare 22 metra në një kilometër.</p>
+			</div>
+		</li>
+		<li>
+			<div class="content">
+				<p>Lumi Shala dallohet me ujin e tij të kristaltë, me prurje mesatare vjetore, afro 34 m³/sek. Prurjet maksimale arrijnë në nëntor me 52m3/sek, ndërsa prurje minimale në gusht në të cilin arrin 9m³/sek. Lumi i Shalës është i pasur me një shumëllojshmëri peshqish, por më i përhapuri është trofta, që rritet vetëm në ujrat e ëmbla.</p>
+			</div>
+		</li>
+		<li>
+			<div class="content">
+				<p>Ngjyra e kaltër dhe e ftohtë e ujit është karakteristike e këtij lumi, shkëmbijt e thepisur që e rrethojnë, duken sikur prekin qiellin me dorë. Në lumin e Shalës gjëndet një bukuri e rrallë, ku për të cilin është e vështir të thuhet vetëm me fjalë. Lumi i Shalës në vitet e demokracisë është bërë një destinacion turistik si për të huajt dhe vëndasit, nga ku vizitorët e shumtë e përshkruajnë si perlën e bukurive të Komanit e të Shqipëris.</p>
+			</div>
+		</li>
+		<li>
+			<div class="content">
+				<h3>Foto</h3>
+		<div class="img-comp-container"><!--Image Comparison Slider---------->
+  <div class="img-comp-img">
+    <img src="photo/lumii.jpg" width="600" height="400">
+  </div>
+  <div class="img-comp-img img-comp-overlay">
+    <img src="photo/lumii2.jpg" width="600" height="400">
+  </div>
+</div>
+			</div>
+		</li>
+		<div style="clear: both;"></div>
+	</ul>
+</div>
+
+<!--Footer-->
+<div class="footer">
+	<h6>Copyright &copy; 2020, Designed by Brisalda Dushaj</h6>
+</div>
+<!--End footer-->
+<script type="text/javascript">
+    	//Nav change background color on scroll 
+        window.addEventListener('scroll', function () {
+            let header = document.querySelector('header');
+            let windowPosition = window.scrollY > 0;
+            header.classList.toggle('scrolling-active', windowPosition);
+        })
+   
+    const navSlide = () => {
+    	const burger = document.querySelector('.burger');
+    	const nav = document.querySelector('.nav-list');
+        const navList = document.querySelectorAll('.nav-list li');
+       
+    	burger.addEventListener('click',()=>{
+    		//Toggle nav
+            nav.classList.toggle('nav-active');
+    	
+    	//Burger Animation
+    	burger.classList.toggle('toggle');
+        });
+}
+
+    navSlide();
+    //End Nav
+/*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
+initComparisons();
+  
+</script>
+</body>
+</html>
