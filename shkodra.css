@@ -197,7 +197,7 @@ header{
 
 @media (min-width: 60rem){
     .hero{
-       /*height: 100vh;*/
+       height: 400vh;
     }
 }
 .hero .sub-headline
