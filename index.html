@@ -1,9 +1,315 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+<title>Welcome | Shkodra</title>
+	<meta charset="utf-8">
+  <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nje website qe sherben si guide">
+  <meta name="keywords" content="qyetet, shiperi, veri, bicikleta, guide, shkodra, razem, theth, shiroke, kalaja, ura, liqeni">
+  <meta name="author" content="Brisalda Dushaj">
+<!--Font awesome CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="shkodra.css">
 </head>
 <body>
+    <header>
+      <!--NAVBAR--------------------------------------------------------->
+        <div class="container">
+            <nav class="nav">
+                <a href="shkodra.html" class="logo">SHKODRA.</a>
+                <ul class="nav-list">
+                    <li>
+                        <a href="shkodra.html" class="nav-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li>
+                        <a href="#destinations" class="nav-link">Destinations</a>
+        
+                    </li>
+                    <li>
+                        <a href="#activities" class="nav-link">Activities</a>
+                    </li>
+                    <li>
+                        <a href="#gallery" class="nav-link">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="register.html" class="nav-link">Register</a>
+                    </li>
+                </ul>
+             <div class="burger">
+             	<div class="line1"></div>
+             	<div class="line2"></div>
+             	<div class="line3"></div>
+             </div>
+            </nav>
+        </div>
+    </header>
+<!--END NAVBAR------------------------------------------------------------------->
 
-</body>
+
+
+<!--Attached Side nav for destinations------------------------------------------->
+  <div id="mySidenav" class="sidenav">
+  <a href="kalajaa.html" id="sidekalaja">Kalaja e Rozafës<i class="fab fa-fort-awesome"></i></a>
+  <a href="shiroke.html" id="sideshiroke">Shirokë<i class="fas fa-water"></i></a>
+  <a href="theth.html" id="sidetheth">Theth<i class="fas fa-mountain"></i></a>
+  <a href="lumi.html" id="sidelumi">Lumi i Shalës<i class="fas fa-ship"></i></a>
+   <a href="razem.html" id="siderazem">Razëm<i class="fas fa-tree"></i></a>
+    <a href="velipoje.html" id="sidevelipoje">Velipojë<i class="fas fa-swimmer"></i></a>
+</div>
+<!--Attached Side nav for destinations------------------------------------------->
+
+<!--HOME-------------------------------------------------------------------------->
+   <section class="hero" id="hero">
+   	<div class="container">
+   		<h2 class="sub-headline">
+   			<span class="first-letter">M</span>irëserdhët
+   		</h2>
+   		<h1 class="headline">Në Shkodër</h1>
+   		<div class="headline-description">
+   			<div class="separator">
+   				<div class="line line-left"></div>
+   				<div class="asterisk"><i class="fas fa-asterisk"></i></div>
+   				<div class="line line-right"></div>
+   			</div>
+   			<div class="single-animation">
+   				<h5>Qyteti i Bicikletave</h5>
+   				<a href="#" class="btn cta-btn" id="show-modal">Explore</a>
+   			</div>
+   		</div>
+   	</div>
+   </section>
+   <div class="modal modal--hiden">
+   	<div class="modal__contents">
+   		<div class="modal__close-bar">
+   			<span>x</span>
+   		</div>
+   		<p>Please enter your email address to find out more</p>
+   		<form id="explore">
+   			<input type="email" placeholder="Your best email" name="">
+   			<button>Submit</button>
+   		</form>
+   	</div>
+   </div>
+<!--HOME-------------------------------------------------------------------------->
+
+<!--ABOUT------------------------------------------------------------------------->
+<div class="about-container" id="about">
+<section class="home-about">
+<div class="home-about-textbox">
+	<h1>About Shkodra</h1>
+	<p>Shkodra është një qytet në veriperëndim të Shqipërisë. Shtrihet në skajin juglindor të Liqenit të Skutarit, në një pikë ku lumi Bunë, një nga dy rrjedhat e lundrimit të Shqipërisë, rrjedh nga liqeni drejt Detit Adriatik.Shkodra është qyteti më historik në Shqipëri. Historiani romak Livy përmendi qytetin si kryeqytetin e mbretit ilir Gentius.
+	<br>
+	Ndërtesat e pikturuara pastel në Qytetin e Vjetër kanë një ambient të veçantë italian. Rajoni i Shkodrës zotëron potenciale të konsiderueshme për zhvillimin e disa llojeve të turizmit duke përfshirë turizmin detar, liqenor, malor e kulturor  Qyteti i Shkodrës si qendër e rajonit është i vendosur kryesisht në rrafshinë. Në drejtimin jugperëndim-verilindje ndodhet 9.5m deri në 24m mbi nivelin e detit. Në veriperëndim të tijndodhet Liqeni i Shkodrës.
+	<br> 
+	 Nga ana lindore qyteti kufizohet nga Lumi i Kirit që buron nga Malësitë e Veriut dhe është 43 km i gjatë.Shkodra nga ana lindore dhe jugore rrethohet nga një varg kodrash deri në 110 m lartësi. Në jugperëndim gjendet<span id="dots">...</span><span id="more">kodra shkëmbore e kalasë së Rozafës, pikëstrategjike shekullore, me lartësi 130 m dhe sipërfaqe 3.6 ha.Muri më i vjetër i kalasë së Shkodrës daton që nga mijëvjeçari I pes.Kalaja e lashtë e Rozafa ka pamje mahnitëse mbi Liqenin e Shkodrës.Nga veriu dhe veriperëndimi shtrihet Fusha e Mbi-Shkodrës, përtej të cilës fillojnë Alpet eShqipërisë.
+	 	<br>
+	  Rreth 30 km në juglindje ndodhet bregdeti adriatik me Plazhin eVelipojës. Brenda një rrezeje prej 30 km, me qendër qytetin e Shkodrës, janë të përfshira disa lloje zonash gjeografike me relieve të ndryshme që shtrihen nga Alpet deri në bregdet, duke përfshirë liqenin e Shkodrës (më i madhi në Ballkan), disa lumenj dhe disa masive malore me potenciale të mëdha për turizëm.Infrastruktura dhe aksesi drejt rajonit t ë Shkodrës janë përmirësuar ndjeshëm gjatëviteve të fundit. Kjo ka bërë që udhëtimi të bëhet më komod dhe më i shpejtë.</span></p>
+	<button type="button" id="read" onclick="read()">Read More</button>
+</div>
+</section>
+</div>
+<!--END ABOUT--------------------------------------------------------------------------------------->
+
+<!--DESTIONATIONS---------------------------------------------------------------------------------->
+<section id="destinations">
+  <h1 class="sub-headline">Top Destinations</h1>
+<div id="dark2">  
+  <div class="container">
+    <div class="card">
+      <div class="imgBx">
+        <img src="photo/lumishales5.jpg">
+      </div>
+      <div class="content">
+        <h2>Lumi i Shalës</h2>
+        <p>Lumi i Shalës është një destinacion turistik që përshkruhet nga vizitoret si perla e bukurive te Komanit. </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="imgBx">
+        <img src="photo/shiroke4.jpg">
+      </div>
+      <div class="content">
+        <h2>Shirokë</h2>
+        <p>Pika turistike e Shirokës është padyshim një nga joshjet më të veçanta që të ofron një fundjavë për të qenë pranë saj.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="imgBx">
+        <img src="photo/thethi6.jpg">
+      </div>
+      <div class="content">
+        <h2>Theth</h2>
+        <p>Pasuritë natyrore të kësaj zone janë të lidhura me trashëgiminë kulturore dhe historike të banorëve vendas, duke formuar bazat më të rëndësishme për turizmin. </p>
+      </div>
+        </div>
+       </div>
+  </div>
+</div>
+</section>
+  <!--END DESTINATIONS--------------------------------------------------------------------------------------->
+
+
+
+<!--ACTIVITIES -------------------------------------------------------------------------------------------------->
+  <div id="activities">
+    <h1>Activities</h1>
+    <div class="cen">
+      <div class="activitie">
+        <i class="fas fa-biking"></i>
+        <h2>Çiklizëm</h2>
+        <p>Rreth 100 km rrugë malore e pa asfaltuar, nëpër një nga peizazhet më të bukura të Shqipërisë.</p>
+      </div>
+      <div class="activitie">
+        <i class="fas fa-hiking"></i>
+        <h2>Ngjitje</h2>
+        <p>Shpate të pjerrta për të praktikuar ngjitjen,ku realizohen dëshirat e të apasionuarve të shkëmbinjve.</p>
+      </div>
+      <div class="activitie">
+        <i class="fas fa-walking"></i>
+        <h2>Ecje në natyrë</h2>
+        <p>Njerëzit janë në kërkim të të panjohurës, të asaj që vetëm syri dhë ndjeshmëria juaj mund ta perceptojë.</p>
+      </div>
+      <div class="activitie">
+        <i class="fas fa-fish"></i>
+        <h2>Peshkim</h2>
+        <p>Gjenden disa vende për të peshkuar si Ura e Kolajve,Ura e Gerlës,Liqeni i Shkodres.</p>
+      </div>
+      <div class="activitie">
+        <i class="fas fa-swimmer"></i>
+        <h2>Noti</h2>
+        <p>Një vend mahnitës për të notuar si dhe për t’u argëtuar në ujin e kristaltë të lumenjve dhe liqenit.</p>
+      </div>
+      <div class="activitie">
+        <i class="fas fa-ship"></i>
+        <h2>Shëtitje me varkë</h2>
+        <p>Aventurierët mund të shijojnë eksplorimin e zonës me varkë,si dhe zhytjen në ujin e freskët.</p>
+      </div>
+    </div>
+  </div>
+ <!--END ACTIVITIES---------------------------------------------------------------------------->
+
+
+
+<!--GALLERY--------------------------------------------------------------------------------------------->
+<div class="gallery-section" id="gallery">
+      <div class="inner-width">
+        <h1 class="sub-headline">#My Gallery</h1>
+        <div class="border"></div>
+        <div class="gallery">
+
+          <a href="photo/keshtjellarozafa.jpg" class="image">
+            <img src="photo/keshtjellarozafa.jpg" alt="">
+          </a>
+
+          <a href="photo/shiroke.jpg" class="image">
+            <img src="photo/shiroke.jpg" alt="">
+          </a>
+
+          <a href="photo/keshtjellarozafa.jpg" class="image">
+            <img src="photo/velipoje.jpg" alt="">
+          </a>
+
+          <a href="photo/syrikalter.jpg" class="image">
+            <img src="photo/syrikalter.jpg" alt="">
+          </a>
+
+          <a href="photo/lumishales.jpg" class="image">
+            <img src="photo/lumishales.jpg" alt="">
+          </a>
+
+          <a href="photo/theth.jpg" class="image">
+            <img src="photo/theth.jpg" alt="">
+          </a>
+
+          <a href="photo/rec.jpg" class="image">
+            <img src="photo/rec.jpg" alt="">
+          </a>
+
+          <a href="photo/pedonale.jpg" class="image">
+            <img src="photo/pedonale.jpg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!--END GALLERY-------------------------------------------------------------------------------------------->
+
+
+    <!--FEEDBACK----------------------------------------------------------------------------------------------->
+<section class="ctaa">
+	<div class="container">
+		<h1 class="title title-ctaa">Do you like what you see?
+<span>Then what are you waiting for?</span>
+		</h1>
+<button class="openbtn" onclick="openForm()">Click for feedback</button>
+	</div>
+</section>
+
+<div id="myOverlay" class="overlay">
+	<span class="closebtn" onclick="closeForm()" title="Close Overlay">&#215</span>
+	<div class="feedback">
+		<h2 class="fheadline">Feedback</h2>
+		<!--Feedback form---------->
+		<form id="form" class="form">
+			<input type="text" value="" id="name" name="nm"
+			placeholder="Enter Name"  autofocus
+			/>
+		
+			<br /><br />
+			
+			<input type="email" value="" name="email" id="email" placeholder="Enter Email" />
+			<textarea type="message" 
+           placeholder="Enter Message Here..."></textarea><br /><br />
+			<input type="submit" name="sab" value="SEND" /><br /><br />
+			<input type="reset" name="reset" value="RESET" />
+		</form>
+		<span class="query">
+			For any Questions Contact me 24/7 Hours: +355 692306622
+		</span>
+	</div>
+</div>
+<!--END FEEDBACK----------------------------------------------------------------------------->
+
+
+<!--FOOTER----------------------------------------------------------------------------------->
+<footer>
+	<div class="footer-container">
+		<!--1------>
+		<ul>
+			<h1>Contact</h1>
+			<li><a href=""><b>Number</b>  +355xxxxxxxx </a></li>
+			<li><a href=""><b>Addres</b> Tirane,Albania</a></li>
+			<li><a href="">Social Media</a></li>
+		</ul>
+    <!--2----------->
+		<div class="social">
+			<h1>
+				Social
+			</h1>
+    <div class="icons">
+    	<a href=""><i class="fab fa-facebook-f"></i></a>
+    	<a href=""><i class="fab fa-twitter"></i></a>
+    	<a href=""><i class="fab fa-instagram"></i></a>
+    	<a href=""><i class="fab fa-youtube"></i></a>
+    </div>
+		</div>
+    <!--3------------->
+		<div class="search">
+			<h1>Search</h1>
+			<input type="search" placeholder="Search Something Here" name="">
+		</div>
+	</div>
+	<p class="copyright">Made with <i class="fa fa-heart red-text"></i> by <a href="">Brisalda Dushaj</a></p>
+</footer>
+<!--END FOOTER----------------------------------------------------------------------------------->
+
+<script type="text/javascript" src="shkodra.js"></script>
+	</body>
 </html>
