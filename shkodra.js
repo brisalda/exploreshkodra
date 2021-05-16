@@ -57,7 +57,7 @@
        });
 
        //show modal
-       const toggleModal = () => {
+       /*const toggleModal = () => {
         document.querySelector('.modal')
          .classList.toggle('modal--hiden');
        };
@@ -79,5 +79,5 @@
 
         function closeForm(){
             document.getElementById("myOverlay").style.display ="none";
-        };
+        };*/
     
