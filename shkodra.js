@@ -48,16 +48,16 @@
       }
     });
 
-       window.addEventListener('scroll', () => {
+       /*window.addEventListener('scroll', () => {
         const scrollable = document.documentElement.scrollHeight - window.innerHeight;
         const scrolled = window.scrollY;
         if(Math.ceil(scrolled) === scrollable) {
             alert('You\'ve reached the bottom!')
         }
-       });
+       });*/
 
        //show modal
-       /*const toggleModal = () => {
+       const toggleModal = () => {
         document.querySelector('.modal')
          .classList.toggle('modal--hiden');
        };
@@ -79,5 +79,5 @@
 
         function closeForm(){
             document.getElementById("myOverlay").style.display ="none";
-        };*/
+        };
     
